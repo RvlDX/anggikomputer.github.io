@@ -1,108 +1,135 @@
 body {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 .navbar {
-    background-color: #343a40; /* Warna navbar sesuai tema */
-    height: 80px;
-    margin: 20px;
-    border-radius: 16px;
-    padding: 15px;
+  background-color: #343a40; /* Warna navbar sesuai tema */
+  height: 70px;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto; /* Grid layout: brand on left, toggler and login button on right */
+  align-items: center;
 }
 
 .navbar-brand {
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 24px;
-    transition: 0.3ms color;
-    margin-left: 10px;
-    font-weight: bold;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 24px;
+  transition: 0.3ms color;
+  font-weight: bold;
 }
 
 .navbar-brand:hover {
-    color: #009970;
+  color: #009970;
 }
 
 .nav-link {
-    color: #ffffff; /* Teks putih untuk tampilan desktop */
-    font-weight: 500;
-    position: relative;
+  color: #ffffff; /* Teks putih untuk tampilan desktop */
+  font-weight: 500;
+  position: relative;
 }
 
 .nav-link:hover {
-    color: #009970;
+  color: #009970;
 }
 
 .nav-link.active {
-    color: #009970;
+  color: #009970;
 }
 
 .login-button {
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3ms background-color;
-    margin-right: 10px;
-    background-color: #009970;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3ms background-color;
+  background-color: #009970;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .navbar-toggler {
-    border: none;
-    font-size: 1.25rem;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 .navbar-toggler:hover {
-    box-shadow: none;
-    outline: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .navbar-toggler:focus .btn-close:focus {
-    box-shadow: none;
-    outline: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .hero-section {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    width: 90%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  width: 90%;
+  max-width: 5000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
-    .nav-link {
-        color: #000000;
-    }
+  .nav-link {
+    color: #000000;
+  }
 }
 
 @media (min-width: 990px) {
-    .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        height: 2px;
-        background-color: #009987;
-        visibility: hidden;
-        transition: 0.3ms ease-in-out;
-    }
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: #009987;
+      visibility: hidden;
+      transition: 0.3ms ease-in-out;
+  }
 
-    .nav-link:hover::before {
-        width: 100%;
-        visibility: visible;
-    }
+  .nav-link:hover::before {
+      width: 100%;
+      visibility: visible;
+  }
 }
+
+/* Tambahan */
+.offcanvas {
+  background-color: #ffffff !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* Ubah Item Warna Teks ketika di klik pada hamburger menu */
+.offcanvas .nav-link {
+  color: #000000 !important;
+}
+
+@media (min-width: 900px) {
+  .navbar-nav .nav-link {
+    color: #ffffff !important; /* Set the text color to white for larger screens */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #009970 !important; /* Hover effect */
+  }
+}
+
