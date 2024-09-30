@@ -17,39 +17,40 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
+      <!-- Logo as Span -->
       <span class="navbar-brand me-auto">ANGGIKOMP</span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title">ANGGIKOMP</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ANGGIKOMP</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="komputer.html">Komputer</a>
+              <a class="nav-link mx-lg-2" href="komputer.html">Komputer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="jaringan.html">Jaringan</a>
+              <a class="nav-link mx-lg-2" href="jaringan.html">Jaringan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="service.html">Service</a>
+              <a class="nav-link mx-lg-2" href="service.html">Service</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link mx-lg-2" href="about.html">About</a>
             </li>
           </ul>
         </div>
       </div>
+      <a href="login.html" class="login-button">Log in</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
-
+  
   <!-- Komputer Categories Section -->
   <section id="komputer-categories" class="container my-5">
     <h2 class="text-center mb-4">Komponen Komputer</h2>
@@ -60,7 +61,7 @@
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wx0L1O7ztZqVwqNnlQ38DGl_2u1P0ZkniQ&s" class="card-img-top" alt="CPU">
           <div class="card-body">
             <h5 class="card-title">CPU</h5>
-            <p class="card-text">Prosesor untuk performa komputer Anda.</p>
+            <p class="card-text">Intel or AMD?</p>
             <a href="#" class="btn btn-primary">Lihat Produk</a>
           </div>
         </div>
@@ -72,7 +73,7 @@
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIZPtPiK9J6F35trHJ-H6IlOE3HrzX_zxvw&s" class="card-img-top" alt="GPU">
           <div class="card-body">
             <h5 class="card-title">GPU</h5>
-            <p class="card-text">Kartu grafis untuk pengalaman gaming dan desain terbaik.</p>
+            <p class="card-text">GTX, RTX, or RX?</p>
             <a href="#" class="btn btn-primary">Lihat Produk</a>
           </div>
         </div>
